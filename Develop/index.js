@@ -13,7 +13,7 @@ const questions = [
   {
     type: "input",
     name: "description",
-    message: "Provide a short description explaining your project.",
+    message: "Provide a short description explaining your project:",
   },
   {
     type: "input",
@@ -23,17 +23,17 @@ const questions = [
   {
     type: "input",
     name: "usage",
-    message: "Provide instructions for using your project.",
+    message: "Provide instructions for using your project:",
   },
   {
     type: "input",
     name: "credits",
-    message: "List your collaborators with links to their GitHub profiles.",
+    message: "List your collaborators with links to their GitHub profiles:",
   },
   {
     type: "checkbox",
-    name: "liscense",
-    message: "What liscense would you like to use for this project?",
+    name: "license",
+    message: "What license would you like to use for this project?",
     choices: [
       "Apache",
       "Boost",
@@ -57,17 +57,19 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    
+}
 
 // TODO: Create a function to initialize app
 function init() {
   inquirer
     .prompt(questions)
-    // .then((answers) =>
+    .then((answers) =>
+        console.log(answers)
     //     const readmePageContent = generateMarkdown(answers);
     //     fs.writeToFile(); //I need to write this function still
-    // );
-
+    );
     
 }
 
