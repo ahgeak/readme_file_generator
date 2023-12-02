@@ -1,31 +1,27 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// renderLicenseBadge returns a license badge based on which license is passed in; if there is no license, returns an empty string
 function renderLicenseBadge(license) {
-  console.log(license);
   if (license.length !== 0) {
     const licenseString = `${license
       .toString()
       .toLowerCase()
       .split(" ")
       .join("")}`;
-    return `![Badge License]: (https://img.shields.io/badge/License-${licenseString}-yellow.svg)
+    return `![License]: (https://img.shields.io/badge/License-${licenseString}-yellow.svg)
     `;
   }
   return "";
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// renderLicenseLink returns the license link; if there is no license, returns an empty string
 function renderLicenseLink(license) {
   if (license.length !== 0) {
-    return `![License Link]: ${license}
+    return `![License]: ${license}
     `;
   }
   return "";
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// renderLicenseSection returns the license section of README; if there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license.length !== 0) {
     return `## License
@@ -34,7 +30,7 @@ function renderLicenseSection(license) {
   return "";
 }
 
-// TODO: Create a function to generate markdown for README
+// generateMarkdown generates markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
 
@@ -73,7 +69,9 @@ ${data.tests}
 If you have questions, you can reach me using the following methods.
 
 GitHub Username: ${data.username}
+
 GitHub Profile: (https://github.com/${data.username})
+
 Email address: ${data.email}
 `;
 }
