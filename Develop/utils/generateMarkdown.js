@@ -7,7 +7,7 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-
+  
 }
 
 // TODO: Create a function that returns the license section of README
@@ -36,7 +36,7 @@ ${data.usage}
 
 ${data.credits}
 
-${renderLicenseSection(license)} //this will create the title for this section and have "there is no license for this section if license is not selected
+${renderLicenseSection(data.license)} //this will create the title for this section and have "there is no license for this section if license is not selected
 
 ${renderLicenseBadge(data.license)}
 

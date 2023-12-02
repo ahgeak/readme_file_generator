@@ -57,18 +57,23 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    
+function writeToFile(fileName, answers) {
+    console.log(fileName);
+    console.log(answers);
+    fs.writeFile(fileName, generateMarkdown(answers), (err) =>
+        err ? console.log(err) : console.log('Succuess! The README markdown file was created!'));
 }
 
 // TODO: Create a function to initialize app
 function init() {
   inquirer
     .prompt(questions)
-    .then((answers) =>
-        console.log(answers)
-    //     const readmePageContent = generateMarkdown(answers);
-    //     fs.writeToFile(); //I need to write this function still
+    .then((answers) => {
+        // console.log(answers);
+        const fileName = `${answers.title.toLowerCase().split(' ').join('')}.md`;
+        // console.log(fileName);
+        writeToFile(fileName, answers);
+        }
     );
     
 }
