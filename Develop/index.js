@@ -54,6 +54,21 @@ const questions = [
       "Zlib",
     ],
   },
+  {
+    type: "input",
+    name: "tests",
+    message: "Provide instructions on how to run tests for your program:",
+  },
+  {
+    type: "input",
+    name: "username",
+    message: "Enter GitHub username:",
+  },
+  {
+    type: "input",
+    name: "email",
+    message: "Enter email address:",
+  },
 ];
 
 // TODO: Create a function to write README file
